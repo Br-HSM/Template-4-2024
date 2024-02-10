@@ -510,3 +510,19 @@ a {
         width: 6rem;
     }    
 }
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 1rem;
+}
+::-webkit-scrollbar-thumb {
+    background: #003666;
+    border-radius: .6rem;
+    filter: brightness(50%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1cc7d0;
+}
+/* end scroll bar */
+
