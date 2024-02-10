@@ -1,0 +1,190 @@
+.w-100 {
+    width: 100%;
+}
+.w-fit {
+    width: fit-content;
+}
+
+/* display */
+.d-grid {
+    display: grid;
+}
+.gap-20 {
+    gap: 2rem;
+}
+.gap-10 {
+    gap: 1rem;
+}
+.gap-30 {
+    gap: 3rem;
+}
+.d-flex {
+    display: flex;
+}
+.flex-1 {
+    flex: 1;
+}
+.f-wrap {
+    flex-wrap: wrap;
+}
+.d-block {
+    display: block;
+}
+.al-c {
+    align-items: center;
+}
+.d-none {
+    display: none;
+}
+.d-f-sb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.d-f-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* end display */
+
+/* background */
+.bg-eee {
+    background-color: #eee;
+}
+.bg-ccc {
+    background-color: #ccc;
+}
+.bg-white {
+    background-color: white;
+}
+.bg-blue {
+    background-color: blue;
+}
+.bg-green {
+    background-color: green;
+}
+.bg-orange {
+    background-color: orangered;
+}
+.bg-red {
+    background-color: red;
+}
+/* end background */
+
+/* padding + margin*/
+.p-10 {
+    padding: 1rem;
+}
+.m-10 {
+    margin: 1rem;
+}
+.p-20 {
+    padding: 2rem;
+}
+.m-20 {
+    margin: 2rem;
+}
+.mb-20 {
+    margin-bottom: 2rem;
+}
+.mt-20 {
+    margin-top: 2rem;
+}
+.mb-40 {
+    margin-bottom: 4rem;
+}
+.mt-40 {
+    margin-top: 4rem;
+}
+.mb-10 {
+    margin-bottom: 1rem;
+}
+.mt-10 {
+    margin: 1rem;
+}
+.mb-5 {
+    margin-bottom:.5rem;
+}
+.mt-5 {
+    margin-top:.5rem;
+}
+.mt-0 {
+    margin-top: 0;
+}
+.mr-10 {
+    margin-right: 1rem;
+}
+.m-0 {
+    margin: 0;
+}
+.p-0 {
+    padding: 0;
+}
+/* end padding + margin*/
+
+/* position  */
+.p-relative {
+    position: relative;
+}
+/* end position */
+
+/* border */
+.b-none {
+    border: none;
+}
+.b-rad-6 {
+    border-radius: 6px;
+}
+.b-rad-50 {
+    border-radius: 50%;
+}
+
+/* end border */
+
+/* text */
+.fs-16 {
+    font-size: 1.6rem;
+}
+.fs-15 {
+    font-size: 1.5rem;
+}
+.fs-14 {
+    font-size: 1.4rem;
+}
+.fw-bold {
+    font-weight: bold;
+}
+.txt-c {
+    text-align: center;
+}
+.c-black {
+    color: black;
+}
+.c-grey {
+    color: grey;
+}
+.c-white {
+    color: white;
+}
+.c-blue {
+    color: blue;
+}
+.c-orange {
+    color: orangered;
+}
+/* end text */
+
+@media only screen and (max-width:767px) {
+    .txt-c-mobile {
+        text-align: center;
+    }
+    .block-mobile {
+        display: block;
+    }
+}
+
+.btt-shape {
+    border-radius: .6rem;
+    padding: .4rem 1rem;
+}

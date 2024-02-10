@@ -1,0 +1,512 @@
+:root {
+    --mainColor: #c50000;
+}
+/* Global rules */
+*{
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+body {
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.page {
+    height: 100vh;
+}
+/* end global rules */
+
+
+/* sidebar */
+.sidebar {
+    width: 25rem;
+    box-shadow: 0 0 1rem #ddd;
+}
+.sidebar > h3 {
+    margin-bottom: 5rem;
+    font-size: 2rem;
+}
+.sidebar ul li a {
+    transition: .3s;
+    margin-bottom: .5rem;
+}
+.sidebar ul li a:hover,.sidebar ul li a.active {
+    background-color: #f6f6f6;
+}
+.sidebar ul li svg {
+    width: 3.5rem;
+    padding: .3rem;
+}
+/* end sidebar */
+
+/* head */
+.content {
+    overflow: scroll;
+}
+.search {
+    position: relative;
+}
+.search::before {
+    content: '';
+    background-image: url(../images/search.svg);
+    background-repeat: no-repeat;
+    background-size: 2.5rem;
+    background-position: 50%;
+    position: absolute;
+    width: 3rem;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.search input {
+    width: calc(100% - 3rem);
+    padding-left: 3rem;
+    border: 1px solid #ccc;
+    width: 10rem;
+    transition: .3s ease-in-out;
+}
+.search input:focus,.search input:not(:placeholder-shown) {
+    width: 18rem;
+    outline-color: var(--mainColor);
+}
+.search input:focus::placeholder {
+    opacity: 0;
+    width: 18rem;
+}
+.notification svg {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.notification::before {
+    content: '';
+    position: absolute;
+    background-color: var(--mainColor);
+    width: .7rem;
+    height: .7rem;
+    border-radius: 50%;
+    left: 14%;
+    top: 14%;
+}
+.head .icons img {
+    width: 2.5rem;
+}
+
+.content h1 {
+    margin: 2rem 2rem 4rem;
+}
+.content h1 span {
+    color: var(--mainColor);
+}
+.content h1::after,.content h1::before {
+    content: '';
+    position: absolute;
+    background-color: var(--mainColor);
+}
+.content h1::after {
+    left: -.5rem;
+    bottom: -.5rem;
+    height: 2.5rem;
+    width: .2rem;
+}
+.content h1::before {
+    left: -1rem;
+    bottom: 0;
+    width: 6rem;
+    height: .2rem;
+}
+/* end head */
+
+/* content */
+.wrapper {
+    grid-template-columns: repeat(auto-fill,minmax(45rem,1fr));
+    margin-left: 2rem; margin-right: 2rem;
+}
+
+/* end content */
+
+/* Welcome */
+.welcome .intro img {
+    width: 17rem;
+}
+
+.welcome .avatar {
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid var(--mainColor);
+    margin-left: 2.5rem;
+    margin-top: -2rem;
+    
+}
+
+.welcome .body {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.welcome .body > div{
+    flex: 1;
+}
+.welcome .visit{
+    margin: 0 1.5rem 1rem auto;
+    width: 8rem;
+    transition: .3s;
+}
+.welcome .visit:hover {
+    background-color: var(--mainColor);
+}
+/* end Welcome */
+
+/* quick draft */
+.qiock-draft textarea {
+    resize: none;
+    min-height: 18rem;
+}
+.quick-draft .save {
+    resize: none;
+    margin-left: auto;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.quick-draft .save:hover {
+    background-color: var(--mainColor);
+}
+/* end quick draft */
+
+/* target */
+.target .target-row .icon {
+    width: 8rem;
+    height: 8rem;
+    margin-right: 1.5rem;
+}
+.target .target-row .icon svg {
+    width: 3rem;
+    height: 3rem;
+}
+.target .details {
+    flex: 1;
+}
+.target .details .progress {
+    height: .5rem;
+}
+.target .details .progress > span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+.target .details .progress > span span {
+    position: absolute;
+    right: -1.2rem;
+    top: -2.2rem;
+    padding: .2rem;
+    border-radius: .4rem;
+}
+.target .details .progress > span span::after {
+    content: '';
+    position: absolute;
+    border-color: transparent;
+    border-width: .5rem;
+    border-style: solid;
+    left: 50%;
+    border-width: .5rem;
+    transform: translateX(-50%);
+    bottom: -.9rem;
+}
+.target .details .blue.progress  > span span::after {
+    border-top-color: blue;
+}
+.target .details .green.progress  > span span::after {
+    border-top-color: green;
+}
+.target .details .orange.progress  > span span::after {
+    border-top-color: orangered;
+}
+
+.blue.icon, .blue.progress {
+    background-color: rgba(100, 200, 200, 0.2);
+    fill: blue;
+}
+.green.icon, .green.progress {
+    background-color: rgba(100, 200, 100, 0.2);
+    fill: green;
+}
+.orange.icon, .blue.orange {
+    background-color: rgba(200, 100, 100, 0.2);
+    fill: orangered;
+}
+/* end target */
+
+/* tickets */
+.tickets .box {
+    border: 1px solid #ccc;
+    width: calc(50% - 1rem);
+}
+/* end tickets */
+
+/* news */
+.last-news .news-row .info{
+    flex: 1;
+}
+.last-news .news-row .days{
+    padding: .2rem .4rem;
+    margin: .5rem auto;
+}
+.last-news .news-row img {
+    width: 10rem;
+}
+.last-news .news-row:not(:last-child) {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+}
+/* end news */
+
+
+/* tasks */
+.tasks .task-box:not(:last-child) {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+}
+.tasks .task-box svg {
+    cursor: pointer;
+    transition: .3s;
+}
+.tasks .task-box svg:hover {
+    fill: var(--mainColor);
+}
+.tasks .task-done {
+    opacity: .6;
+    text-decoration: line-through;
+}
+/* end tasks */
+
+/* lastest upload */
+.latest-up ul li:not(:last-child) {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+/* end lastest upload */
+
+/* current project */
+.current-project ul:before {
+    content: '';
+    position: absolute;
+    left: 1.1rem;
+    width: .2rem;
+    height: 100%;
+    background-color: var(--mainColor);
+}
+.current-project ul li:before {
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid white;
+    outline: 2px solid var(--mainColor);
+    margin-right: 1.5rem;
+    z-index: 1;
+    background-color: white;
+}
+.current-project ul li.done:before {
+    background-color: var(--mainColor);
+}
+.current-project ul li.current:before {
+    animation: change-color .8s infinite alternate;
+}
+@keyframes change-color {
+    from {
+        background-color: var(--mainColor);
+    }
+    to {
+        background-color: white;
+    }
+}
+/* end current project */
+
+/* reminder */
+.reminder ul li::after {
+    content: '';
+    position: absolute;
+    width: .2rem;
+    height: 100%;
+    left: -1.5rem;
+    top: 0;
+}
+.reminder ul li::before {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    left: -4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.reminder ul li:nth-child(1)::before,
+.reminder ul li:nth-child(1)::after {
+    background-color: red;
+}
+.reminder ul li:nth-child(2)::before,
+.reminder ul li:nth-child(2)::after {
+    background-color: blue;
+}
+.reminder ul li:nth-child(3)::before,
+.reminder ul li:nth-child(3)::after {
+    background-color: green;
+}
+.reminder ul li:nth-child(4)::before,
+.reminder ul li:nth-child(4)::after {
+    background-color: orangered;
+}
+/* end reminder */
+
+/* last post */
+.last-post img {
+    width: 4rem;
+    border-radius: 50%;
+}
+.last-post > div:not(:last-child) {
+    padding-bottom: 1rem;
+    border-bottom: #ccc 1px solid;
+}
+/* end last post */
+
+/* Social Media */
+.social-media .social-media-box {
+    background-color: #333;
+}
+
+.social-media .social-media-box a {
+    border: 2px solid white;
+    transition: .3s;
+}
+.social-media .social-media-box a:hover {
+    background-color: white;
+    color: black;
+}
+.social-media .social-media-box svg {
+    transition: .3s;
+    cursor: pointer;
+}
+.social-media .social-media-box svg:hover {
+    transform: rotate(5deg);
+}
+/* end Social Media */
+
+/* table Projects */
+.projects-table .responsive-table {
+    overflow-x: hidden;
+    overflow-x: auto;
+}
+.projects-table table {
+    min-width: 100rem;
+    border-spacing: 0;
+}
+.projects-table thead td {
+    background-color: #eee;
+    font-weight: bold;
+}
+.projects-table td {
+    padding: 1.5rem;
+} 
+.projects-table tbody td {
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+    transition: .3s;
+} 
+
+.projects-table tbody td:last-child {
+    border-right: 1px solid #eee;
+}
+
+.projects-table img {
+    width: 4rem;
+    border-radius: 50%;
+}
+.projects-table img:not(:first-child) {
+    margin-left: -2rem;
+}
+.projects-table tbody tr:hover td {
+    background-color: #eee;
+}
+
+/* end table Projects */
+
+@media only screen and (max-width:767px) {
+    .sidebar ul {
+        padding: 0;
+    }
+
+    .sidebar {
+        width: 8rem;
+        padding: 1rem;
+    }
+    .sidebar > h3 {
+        display: none;
+    }
+    .text-mobile {
+        display: block !important;
+        font-size: 1.6rem !important;
+    }
+    .sidebar ul li span {
+        display: none;
+    }
+    .sidebar ul li a {
+        justify-content: center;
+    }
+    .wrapper {
+        grid-template-columns: minmax(20rem,1fr);
+        margin-left: 1rem; margin-right: 1rem;
+        gap: 1rem;
+    }
+    .welcome .intro {
+        padding-bottom: 2rem;
+    }
+    .hide-mobile {
+        display: none;
+    }
+    .welcome .avatar {
+        margin-left: 0;
+    }
+    .welcome .body > div:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+    .tickets .box {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width:767px) {
+    .sidebar > h3:before {
+        background-color: var(--mainColor);
+        content: '';
+        display: block;
+        position:absolute; 
+        right:50%; 
+        top:-.1rem;
+        height: 2px;
+        width: 6rem;
+    }
+    .sidebar > h3:after {
+        background-color: var(--mainColor);
+        content: '';
+        display: block;
+        position:absolute; 
+        left:50%; 
+        bottom:-.05rem;
+        height: 2px;
+        width: 6rem;
+    }    
+}
