@@ -444,6 +444,148 @@ a {
 
 /* end table Projects */
 
+/* start settings */
+.stettings-page {
+    grid-template-columns: repeat(auto-fill , minmax(50rem,1fr));
+}
+.toggle-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+}
+.toggle-switch {
+    background-color: #ccc;
+    width: 7rem;
+    height: 3rem;
+    position: relative;
+    border-radius: 1.6rem;
+    cursor: pointer;
+}
+.toggle-switch::before {
+    content: '\e5cd';
+    font-family: 'Material Symbols Outlined';
+    position: absolute;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #ccc;
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: white;
+    left: .4rem;
+    top: 50%;
+    border-radius: 50%;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+.toggle-checkbox:checked + .toggle-switch {
+    background-color: blue;
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+    left: 4.4rem;
+    content: '\e876';
+    color: blue;
+}
+
+.stettings-page textarea {
+    border: 1px solid #ccc;
+    height: 8rem;
+    resize: none;
+} 
+
+.general input {
+    border: 1px solid #ccc;
+    height: 2rem;
+}
+
+.general input {
+    margin-bottom: 1rem ;
+}
+.general .email {
+    margin-bottom: 0;
+}
+.general .email span {
+    cursor: pointer;
+}
+.sec-box {
+    padding-bottom: 15px;
+    margin-top: 1rem;
+}
+.sec-box:not(:last-of-type) {
+border-bottom: 1px solid #eee;
+}
+.sec-box .button {
+transition: 0.3s;
+}
+.sec-box .button:hover {
+background-color: var(--mainColor);
+}
+
+.setting-social-media .box {
+border: 1px solid #ccc;
+background-color: #eee;
+gap: 2rem;
+}
+
+.setting-social-media .box svg {
+    fill: gray;
+}
+
+.setting-social-media .box input {
+    border: none;
+    background-color: #eee;
+    position: relative;
+    height: 3rem;
+}
+.setting-social-media .box::before {
+    content: '';
+    height: 7rem;
+    width: .1rem;
+    background-color: #ccc;
+    left: 7rem;
+    top: 0;
+    position: absolute;
+}
+
+.widgets-control .control label,.back-up .control label {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+.servers input {
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 1rem;
+}
+
+.servers .server {
+    border: 1px solid #ccc;
+    padding: 2rem 0;    
+    margin: 0;
+    transition: .3s;
+
+}
+
+.servers .server label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: .3s;
+}
+.servers input[type='radio']:checked + .server{
+    border: 2px solid var(--mainColor);
+    color: var(--mainColor);
+    fill: var(--mainColor);
+}
+/* end start settings */
+
+
+
 @media only screen and (max-width:767px) {
     .sidebar ul {
         padding: 0;
@@ -486,6 +628,15 @@ a {
     .tickets .box {
         width: 100%;
     }
+    .stettings-page {
+        grid-template-columns: minmax(10rem,1fr);
+        margin-left: 1rem; margin-right: 1rem;
+        gap: 1rem;
+    }
+    .servers {
+        flex-wrap: wrap;
+    }
+    
 }
 
 @media only screen and (min-width:767px) {

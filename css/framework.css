@@ -76,6 +76,9 @@
 .p-10 {
     padding: 1rem;
 }
+.p-5 {
+    padding: .5rem;
+}
 .m-10 {
     margin: 1rem;
 }
@@ -143,6 +146,9 @@
 /* end border */
 
 /* text */
+.fs-20 {
+    font-size: 2rem;
+}
 .fs-16 {
     font-size: 1.6rem;
 }
@@ -151,6 +157,9 @@
 }
 .fs-14 {
     font-size: 1.4rem;
+}
+.fs-13 {
+    font-size: 1.3rem;
 }
 .fw-bold {
     font-weight: bold;
