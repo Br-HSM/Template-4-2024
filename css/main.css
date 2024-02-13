@@ -587,6 +587,17 @@ gap: 2rem;
 /* Prifile */
 .profile .avatar {
     padding: 3rem;
+    margin-right: 3rem;
+    
+}
+.profile .avatar::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0.1rem;
+    height: 100%;
+    background-color: #ccc;
 }
 
 .profile .overview .avatar img {
@@ -609,7 +620,7 @@ gap: 2rem;
 }
 
 .profile .overview .info li {
-    margin-top: 2rem;
+    margin-top: .5rem;
 }
 
 .profile .overview .info label div{
@@ -623,6 +634,27 @@ gap: 2rem;
 .profile .overview .info label .toggle-checkbox:checked + div::before {
     left: 5.2rem;
 }
+.skills-card {
+    flex-basis: 30%;
+}
+
+.skills-card div {
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+.skills-card div span {
+    background-color: #ccc;
+    padding: .5rem 1rem;
+    border-radius: .6rem;
+    flex: 1;
+
+}
+
+.activities img {
+    width: 4rem;
+    height: 4rem;
+    
+} 
 /* end Prifile */
 
 
@@ -680,10 +712,25 @@ gap: 2rem;
         flex-direction: column;
     }
     .profile .overview .info li {
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
         gap: 1rem;
     }
-    
+    .profile .overview .info {
+        text-align: center;
+    }
+    .profile .overview .info label {
+        margin: 0 auto;
+    }
+    .profile .avatar {
+        margin-right: 0;
+    }
+    .profile .avatar::after {
+        display: none;
+    }
+    .profile .other-data {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (min-width:767px) {
